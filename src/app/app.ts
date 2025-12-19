@@ -9,5 +9,9 @@ import { Test } from "./test/test";
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('myAngularProject');
+   title = 'Greetings,';//change made here for status check
+   msg = 'to Angular 18 series.';
+   onemore = 'this is actual:';  
+   empty = '';
+   isLoggedIn=false;//ternary operator example
 }

@@ -1,0 +1,10 @@
+.formal-text {
+  color: navy;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.informal-text {
+  color: orange;
+  font-style: italic;
+}
