@@ -1,4 +1,4 @@
-.formal-text {
+/* .formal-text {
   color: navy;
   font-weight: bold;
   text-transform: uppercase;
@@ -7,4 +7,8 @@
 .informal-text {
   color: orange;
   font-style: italic;
+} */
+p {
+  font-size: 1.5rem;
+  
 }
