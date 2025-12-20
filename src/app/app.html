@@ -230,10 +230,19 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <p>Values of a:{{a}}</p>
+
+      <div>
+        <h1>Property Binding</h1>
+        <br />
+        <input type="text" class="styled-input" value="{{inputValue}}" disabled="{{inputValue}}" />
+        <br /> <br/>
+        <input type="text" class="styled-input" [value]="inputValue" [disabled] ="isDisabled"/>
+      </div>
+
+      <!-- <p>Values of a:{{a}}</p>
       <p>Values of b:{{b}}</p>
       <p>Sum of a and b:{{ans}}</p>
-      <p>Multiplication of a and b:{{a*b}}</p>
+      <p>Multiplication of a and b:{{a*b}}</p> -->
       <!-- <h1>{{ title }}</h1>
       <h2>{{ onemore }}</h2>
       <h3>{{ 11+10 }}</h3>
