@@ -1,4 +1,5 @@
-<input type="text" (keyup)= "onKeyPress($event)"/>
+<input type="text" (keydown)= "isShift($event)"/>
+<!-- <input type="text" (keydown.shift.y)= "isShift()"/> -->
 <!-- <input type="text" (keydown.enter)="onKeyPress()"/> -->
 <!-- <input type="text" (keyup.enter)="onKeyPress()"/> -->
 <!-- <input type="text" (focus)="onFocus()" /> -->

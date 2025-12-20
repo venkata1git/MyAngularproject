@@ -9,8 +9,14 @@ import { Test } from "./test/test";
   styleUrl: './app.css'
 })
 export class App {
-  onKeyPress (e: any) {
-    console.log(e.target.value);
+  isShift(event: any) {
+    if (event.shiftKey && event.key === 'Y') {
+    console.log('Shift Key + y Pressed event detected!',event);
+      }
+    }
+  }
+  // onKeyPress (e: any) {
+  //   console.log(e.target.value);
   // onFocus() {
   //   console.log('Focus Pressed event detected!');
   // }
@@ -20,7 +26,7 @@ export class App {
   //} 
   // display(msg: string){ 
   //   alert(msg);
-   }
+  
 
   // imgSrc: string = '/assets/intervsPB.jpg';
 
@@ -34,4 +40,4 @@ export class App {
   //  onemore = 'this is actual:';  
   //  empty = '';
   //  isLoggedIn=false;//ternary operator example
-}
+
