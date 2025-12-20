@@ -10,12 +10,15 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.css',
 })
 export class App {
-  staticInput: String = 'Static two-way binding example'; 
-  dynamicInput: String = ''; 
+  inputVal: string = '';
+  dynamicVal: string = '';
+
+  show() {
+    this.dynamicVal = this.inputVal;
+    alert(this.dynamicVal);
+  }
+
 }
-
-
-
 
 
 // import { Component, signal } from '@angular/core';
