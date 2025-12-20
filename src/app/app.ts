@@ -9,10 +9,10 @@ import { Test } from "./test/test";
   styleUrl: './app.css'
 })
 export class App {
-  count: number = 0;
-  counter(type: string) {
-    type === 'incr' ? this.count++ : this.count--;
-  }
+  counter=0;
+  incr(){
+    this.counter++;
+  } 
   // display(msg: string){ 
   //   alert(msg);
   // }
