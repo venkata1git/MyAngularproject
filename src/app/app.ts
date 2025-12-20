@@ -1,25 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class AppComponent {
-  counter: number = 0;
-
-  onKeyDown(event: KeyboardEvent) {
-    if (event.key === 'ArrowUp') {
-      this.counter++;
-    } else if (event.key === 'ArrowDown') {
-      this.counter--;
-      
-    }
-  }
+export class App {
+  staticInput: String = 'Static two-way binding example'; 
+  dynamicInput: String = ''; 
 }
+
 
 
 
