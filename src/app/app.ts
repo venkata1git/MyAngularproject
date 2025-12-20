@@ -9,18 +9,18 @@ import { Test } from "./test/test";
   styleUrl: './app.css'
 })
 export class App {
-  // onKeyPress () {
-  //   console.log('Key Pressed event detected!');
+  onKeyPress (e: any) {
+    console.log(e.target.value);
   // onFocus() {
   //   console.log('Focus Pressed event detected!');
   // }
 
-  onSelect() {
-    console.log('Select event detected!');
-  } 
+  // onSelect() {
+  //   console.log('Select event detected!');
+  //} 
   // display(msg: string){ 
   //   alert(msg);
-  // }
+   }
 
   // imgSrc: string = '/assets/intervsPB.jpg';
 
