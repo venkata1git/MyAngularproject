@@ -1,6 +1,18 @@
-img{
-  height: 400px;
-  width: 700px;
-  display: block;
-  margin: 0 auto;
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh; /* Full viewport height */
+}
+button{
+  background-color: #416b43; /* Green */
+  border: color-mix(in hsl shorter hue, color percentage, color percentage);
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }

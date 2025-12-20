@@ -9,7 +9,11 @@ import { Test } from "./test/test";
   styleUrl: './app.css'
 })
 export class App {
-  imgSrc: string = '/assets/intervsPB.jpg';
+  display(msg: string){ 
+    alert(msg);
+  }
+
+  // imgSrc: string = '/assets/intervsPB.jpg';
 
   // inputValue: string = 'Hello';
   // isDisabled: boolean = false;
