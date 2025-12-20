@@ -9,8 +9,10 @@ import { Test } from "./test/test";
   styleUrl: './app.css'
 })
 export class App {
-  inputValue: string = 'Hello';
-  isDisabled: boolean = false;
+  imgSrc: string = '/assets/intervsPB.jpg';
+
+  // inputValue: string = 'Hello';
+  // isDisabled: boolean = false;
   // a=10;
   // b=20;
   // ans=this.a+this.b;//other ops like *,/,- also work
