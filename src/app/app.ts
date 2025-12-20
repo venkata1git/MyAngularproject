@@ -9,9 +9,14 @@ import { Test } from "./test/test";
   styleUrl: './app.css'
 })
 export class App {
-  counter=0;
-  incr(){
-    this.counter++;
+  // onKeyPress () {
+  //   console.log('Key Pressed event detected!');
+  // onFocus() {
+  //   console.log('Focus Pressed event detected!');
+  // }
+
+  onSelect() {
+    console.log('Select event detected!');
   } 
   // display(msg: string){ 
   //   alert(msg);
