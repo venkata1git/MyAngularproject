@@ -9,9 +9,13 @@ import { Test } from "./test/test";
   styleUrl: './app.css'
 })
 export class App {
-  display(msg: string){ 
-    alert(msg);
+  count: number = 0;
+  counter(type: string) {
+    type === 'incr' ? this.count++ : this.count--;
   }
+  // display(msg: string){ 
+  //   alert(msg);
+  // }
 
   // imgSrc: string = '/assets/intervsPB.jpg';
 
