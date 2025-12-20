@@ -1,25 +1,66 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Test } from "./test/test";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet ],//Test
+  standalone: true,
+  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
-  isShift(event: any) {
-    if (event.shiftKey && event.key === 'Y') {
-    console.log('Shift Key + y Pressed event detected!',event);
-      }
+export class AppComponent {
+  counter: number = 0;
+
+  onKeyDown(event: KeyboardEvent) {
+    if (event.key === 'ArrowUp') {
+      this.counter++;
+    } else if (event.key === 'ArrowDown') {
+      this.counter--;
+      
     }
   }
+}
+
+
+
+
+// import { Component, signal } from '@angular/core';
+// import { RouterOutlet } from '@angular/router';
+// import { Test } from "./test/test";
+
+// @Component({
+//   selector: 'app-root',
+//   imports: [RouterOutlet ],//Test
+//   templateUrl: './app.html',
+//   styleUrl: './app.css'
+// })
+
+
+
+// export class App {
+//   counter: number = 0;
+//   onKeyDown (event: KeyboardEvent) {
+//     if  (event.key === "ArrowUP") {
+//         this.counter++;
+//     }
+//     else if (event.key === "ArrowDown") {
+//         this.counter--;
+//       }
+//     }
+//   }
+
+
+    // isShift(event: any) {
+  //   if (event.shiftKey && event.key === 'Y') {
+  //   console.log('Shift Key + y Pressed event detected!',event);
+  //     }
+  
   // onKeyPress (e: any) {
   //   console.log(e.target.value);
   // onFocus() {
   //   console.log('Focus Pressed event detected!');
   // }
+
 
   // onSelect() {
   //   console.log('Select event detected!');

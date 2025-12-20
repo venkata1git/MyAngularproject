@@ -1,6 +1,21 @@
-<input type="text" (keydown)= "isShift($event)"/>
+<!-- <input type="text" (keydown)= "isShift($event)"/> -->
 <!-- <input type="text" (keydown.shift.y)= "isShift()"/> -->
 <!-- <input type="text" (keydown.enter)="onKeyPress()"/> -->
 <!-- <input type="text" (keyup.enter)="onKeyPress()"/> -->
 <!-- <input type="text" (focus)="onFocus()" /> -->
 <!-- <input type="text" (select)="onSelect()" /> -->
+
+<!-- task key down -->
+ <!-- <div class="counter-container" tabindex= "0" (keydown) = "onKeyDown($event)">
+    <p class="counter">Counter: {{ counter }}</p>
+    <p class="instruction">Use Up and Down arrow keys to
+       <i><b>increment/decrement</b></i> the counter.</p> 
+ </div> -->
+
+
+ <div class="counter-container" tabindex="0" (keydown)="onKeyDown($event)">
+  <p class="counter">Counter: {{ counter }}</p>
+  <p class="instruction">
+    Use Up and Down arrow keys to <i><b>increment/decrement</b></i> the counter.
+  </p>
+</div>
