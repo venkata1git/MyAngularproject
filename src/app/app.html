@@ -1,7 +1,8 @@
-<div *ngIf="display">Structural Directive Example</div>
-
-<h1 *ngIf="num > 0">{{num}} is greater than 0</h1>
-
-<h1 *ngIf="num < 0">{{num}} is less than 0</h1>
-
-<h1 *ngIf="num == 0">{{num}} is 0</h1>
+<!-- <button (click)="show()">Show</button>
+<div *ngIf ="displayElement">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a, molestias quas sapiente doloremque at rem sequi dolorum excepturi nulla magnam unde laudantium rerum qui nesciunt libero sint aliquam quidem.</p>
+</div> -->
+<button (click)="displayElement = !displayElement">Show</button>
+<div *ngIf ="displayElement">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a, molestias quas sapiente doloremque at rem sequi dolorum excepturi nulla magnam unde laudantium rerum qui nesciunt libero sint aliquam quidem.</p>
+</div>

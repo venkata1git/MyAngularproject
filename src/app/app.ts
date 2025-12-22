@@ -11,9 +11,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.css'
 })
 export class App {
-  // 3. Set this to true so you can see the first div
-  display: boolean = true; 
-  
-  // 4. Define 'num' so the other checks work
-  num: number = 10; 
+  displayElement: boolean = false;
+
+  // show(): void {
+  //   this.displayElement = !this.displayElement;
+  // }
 }
