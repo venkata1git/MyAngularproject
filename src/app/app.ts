@@ -12,12 +12,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.css'
 })
 export class App {
-  colorMode: string = 'lightMode';
-  toggleMode() {
-    if (this.colorMode === 'lightMode') {
-      this.colorMode = 'darkMode';
-    } else {
-      this.colorMode = 'lightMode';
-    }
+  applyValue ={'color': 'darkgreen',
+               'font-style':'italic',
+               'font-size':'35px',
+               'font-weight': 'bold',
+              };
+
+  colorValue: string = 'navy';
+  fontSize: string = '30px';
+  isItalic: string = 'italic';
   }
-} 
+ 
