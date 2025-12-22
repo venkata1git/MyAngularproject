@@ -1,79 +1,19 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // 1. Import CommonModule
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, CommonModule], // 2. Add CommonModule here
   templateUrl: './app.html',
-  styleUrl: './app.css',
+  styleUrl: './app.css'
 })
 export class App {
-  quantity: number = 1;
-  pricePerItem: number = 100;
-
-  get totalPrice(): number {
-    return this.quantity * this.pricePerItem;
-  }
+  // 3. Set this to true so you can see the first div
+  display: boolean = true; 
+  
+  // 4. Define 'num' so the other checks work
+  num: number = 10; 
 }
-
-
-// import { Component, signal } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
-// import { Test } from "./test/test";
-
-// @Component({
-//   selector: 'app-root',
-//   imports: [RouterOutlet ],//Test
-//   templateUrl: './app.html',
-//   styleUrl: './app.css'
-// })
-
-
-
-// export class App {
-//   counter: number = 0;
-//   onKeyDown (event: KeyboardEvent) {
-//     if  (event.key === "ArrowUP") {
-//         this.counter++;
-//     }
-//     else if (event.key === "ArrowDown") {
-//         this.counter--;
-//       }
-//     }
-//   }
-
-
-    // isShift(event: any) {
-  //   if (event.shiftKey && event.key === 'Y') {
-  //   console.log('Shift Key + y Pressed event detected!',event);
-  //     }
-  
-  // onKeyPress (e: any) {
-  //   console.log(e.target.value);
-  // onFocus() {
-  //   console.log('Focus Pressed event detected!');
-  // }
-
-
-  // onSelect() {
-  //   console.log('Select event detected!');
-  //} 
-  // display(msg: string){ 
-  //   alert(msg);
-  
-
-  // imgSrc: string = '/assets/intervsPB.jpg';
-
-  // inputValue: string = 'Hello';
-  // isDisabled: boolean = false;
-  // a=10;
-  // b=20;
-  // ans=this.a+this.b;//other ops like *,/,- also work
-  //  title = 'Greetings,';//change made here for status check
-  //  msg = 'to Angular 18 series.';
-  //  onemore = 'this is actual:';  
-  //  empty = '';
-  //  isLoggedIn=false;//ternary operator example
-
