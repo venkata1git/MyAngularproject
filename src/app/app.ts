@@ -12,9 +12,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.css'
 })
 export class App {
-  //updateStyles: any = 'updateStyles';
-  hasText: boolean = false;
-  textInput(e: any) {
-    this.hasText = e.target.value !== '';
+  colorMode: string = 'lightMode';
+  toggleMode() {
+    if (this.colorMode === 'lightMode') {
+      this.colorMode = 'darkMode';
+    } else {
+      this.colorMode = 'lightMode';
+    }
   }
-}
+} 

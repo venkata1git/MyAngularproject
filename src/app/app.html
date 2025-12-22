@@ -1,3 +1,13 @@
-<!-- <p [ngClass] = "'updateStyles italicText letterFormat'"> This is an example of ngClass directive</p> can add array to dymanically pass style -->
- <input type="text" placeholder = "Enter text here..."
- (input) ="textInput($event)" [ngClass]="{ 'txt': hasText }"/>
+<button (click) ="toggleMode()"> {{colorMode==='lightMode' ? 'Switch To Dark Mode':'Switch To Light Mode'}}</button>
+<div class="box" [ngClass]="colorMode">
+  <h1>Light Node</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae earum quas optio, excepturi fuga at, beatae asperiores, ipsam voluptas incidunt deleniti explicabo quisquam eos perferendis ipsa debitis dignissimos provident voluptatibus?
+  </p>
+</div>
+<div class="box" [ngClass]="colorMode">
+  <h1>Dark Node</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae earum quas optio, excepturi fuga at, beatae asperiores, ipsam voluptas incidunt deleniti explicabo quisquam eos perferendis ipsa debitis dignissimos provident voluptatibus?
+  </p>
+</div>
