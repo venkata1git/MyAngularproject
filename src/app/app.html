@@ -1,13 +1,28 @@
-<ng-template #show let-person="showMessage">
-  <P style="font-size: 20px">My name is {{ person.name }}, 
-    I am {{ person.age}} years old & I am from {{person.location}}. </P>
+<ng-template #employeeTable let-emp>
+  <table
+    border="1"
+    style="
+      text-align: center;
+      font-size: 20px;
+      margin: 0 auto;
+      padding: 15px;
+      width: 30%;
+      background: #fff;
+    "
+  >
+     <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Position</th>
+    </tr>
+    <tr *ngFor="let e of emp">
+      <td>{{ e.id }}</td>
+      <td>{{ e.name }}</td>
+      <td>{{ e.position }}</td>
+    </tr>
+  </table>
 </ng-template>
-<ng-container *ngTemplateOutlet="show; 
-          context: { showMessage: showDetails }
-          "
-          ></ng-container>
-<!-- <ng-container *ngTemplateOutlet="show; 
-          context: { showMessage: 'This is the context message' }
-          "
-          ></ng-container> -->
-    
+
+<ng-container
+  *ngTemplateOutlet="employeeTable; context: { $implicit: employees }"
+></ng-container>

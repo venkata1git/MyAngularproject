@@ -11,11 +11,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.css'
 })
 export class  App{
-    showDetails={
-      name:"John Doe",
-      age:30,
-      location: 'New York',
-    };
+    employees = [
+      { id: 1, name: 'Alice', position: 'Developer' },
+      { id: 2, name: 'Bob', position: 'Designer' },
+      { id: 3, name: 'Charlie', position: 'Manager' }
+    ];
+    // showDetails={
+    //   name:"John Doe",
+    //   age:30,
+    //   location: 'New York',
+    // };
     // a:number=10;
     // b:number=20;
     // calc():number{
