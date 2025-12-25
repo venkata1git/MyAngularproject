@@ -11,18 +11,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.css'
 })
 export class  App{
- subjectList= [
-  {
-    subCode:101,
-    subName:'Math'
-  },
-  {
-    //subCode:102,
-    subName:'C++'
-  },
-  {
-    subCode:103,
-    subName:'NestJS'
-  },
-];
+//  isAuthorized:boolean= false;
+listItems: string[] = ['Item 1', 'Item 2', 'Item 3'];
 }  
