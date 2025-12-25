@@ -1,11 +1,13 @@
-<div class="box">
-    <div class="input-container">
-        <input type="text" [(ngModel)]="user"/>
-        <label for="">Full Name</label>
-    </div>
-    <ng-container *ngIf="user!== ''; else notValid"></ng-container>
-    <ng-template #notValid>
-        <h3>Please enter your name</h3>
-    </ng-template>    
-    </div>
+<ng-template #show let-person="showMessage">
+  <P style="font-size: 20px">My name is {{ person.name }}, 
+    I am {{ person.age}} years old & I am from {{person.location}}. </P>
+</ng-template>
+<ng-container *ngTemplateOutlet="show; 
+          context: { showMessage: showDetails }
+          "
+          ></ng-container>
+<!-- <ng-container *ngTemplateOutlet="show; 
+          context: { showMessage: 'This is the context message' }
+          "
+          ></ng-container> -->
     

@@ -11,5 +11,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.css'
 })
 export class  App{
-     user: string='';
+    showDetails={
+      name:"John Doe",
+      age:30,
+      location: 'New York',
+    };
+    // a:number=10;
+    // b:number=20;
+    // calc():number{
+    //   return this.a + this.b;
+    // }
 }  
