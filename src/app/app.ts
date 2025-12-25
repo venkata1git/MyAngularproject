@@ -1,8 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +10,24 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  applyValue ={'color': 'darkgreen',
-               'font-style':'italic',
-               'font-size':'35px',
-               'font-weight': 'bold',
-              };
-
-  colorValue: string = 'navy';
-  fontSize: string = '30px';
-  isItalic: string = 'italic';
+export class  App{
+  nm: string ='';
+  em: string ='';
+  emailIsValid: boolean = false;
+  formSubmitted: boolean = false;
+  
+  checkEmailValidation(em: string): void{
+    if(em.includes('@') && em.includes('.com')){
+      this.emailIsValid=true;
+    }else{
+      this.emailIsValid=false;
+    }
   }
- 
+  showMessage() {
+    if(this.nm && this.emailIsValid){
+      this.formSubmitted = true;
+    }else{
+      this.formSubmitted = false;
+    }
+  }
+} 
