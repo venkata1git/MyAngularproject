@@ -11,6 +11,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.css'
 })
 export class  App{
-//  isAuthorized:boolean= false;
-listItems: string[] = ['Item 1', 'Item 2', 'Item 3'];
+     user: string='';
 }  

@@ -1,16 +1,11 @@
-<ng-container *ngIf="listItems.length>0; else noItems">
-    <!-- <h1>Authorized User</h1>
-
-<ng-template #guestUser>
-    <h1>Guest User</h1> -->
-    <ul>
-        <li *ngFor="let item of listItems">
-            {{ item }}  
-        </li>
-    </ul>
-</ng-container>
-<ng-template #noItems>
-    <p>No items to display!</p>
-</ng-template>
-<!-- </ng-template> -->
+<div class="box">
+    <div class="input-container">
+        <input type="text" [(ngModel)]="user"/>
+        <label for="">Full Name</label>
+    </div>
+    <ng-container *ngIf="user!== ''; else notValid"></ng-container>
+    <ng-template #notValid>
+        <h3>Please enter your name</h3>
+    </ng-template>    
+    </div>
     
