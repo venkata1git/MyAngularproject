@@ -1,25 +1,20 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
+import { Component, OnChanges, SimpleChanges, Input, DoCheck } from '@angular/core';
+import { JsonPipe } from '@angular/common';
 @Component({
   selector: 'app-test',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [JsonPipe],
   templateUrl: './test.html',
-  styleUrl: './test.css'
+  styleUrl: './test.css',
 })
-export class Test implements OnChanges {
+export class Test implements DoCheck{
+  @Input() user:any;
+  private previousUserName: string | undefined;
 
-  @Input() inputValue: string = '';
-  previousValue: string | undefined;
-  currentValue: string | undefined;
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if(changes['inputValue']){
-      this.previousValue = changes['inputValue'].previousValue;
-      this.currentValue = changes['inputValue'].currentValue;
-      console.log(changes);
+  ngDoCheck(): void {
+    if(this.user.name != this.previousUserName){
+      this.previousUserName = this.user.name;
+      console.log('ngDoCheck called - User name changed to: ',
+        this.user.name);
     }
   }
-  
-}  
+}

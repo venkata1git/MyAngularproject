@@ -11,24 +11,11 @@ import { Test } from './test/test';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class  App implements OnInit {  
-     count: number=0;
-     countInterval: any;
-     startCounter(){
-      this.countInterval = setInterval(()=>{
-        if(this.count<= 5){
-          console.log(this.count++)
-        }else{
-          clearInterval(this.countInterval);
-        }
-      }, 1000);
-     }
-     ngOnInit(): void {
-        this.startCounter();
-       //console.log('ngONInint: Component has been initialized')
-     }
-     constructor(){
-      // this.startCounter();
-      //console.log('Constructor: Component has been constructed')
+export class  App  {  
+     user = {
+      name: 'UserA'
+     };
+     changeUserName(){
+      this.user.name = 'UserB';
      }
  } 
