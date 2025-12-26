@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-child',
-  imports: [],
+  imports: [NgForOf],
   templateUrl: './child.html',
   styleUrl: './child.css',
 })
 export class Child {
-    @Input() receiveMessage: string = '';
+    @Input() showData: {id: number; name: string } [] = [];
 }
