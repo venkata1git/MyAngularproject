@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgForOf } from '@angular/common';
 
@@ -9,5 +9,10 @@ import { NgForOf } from '@angular/common';
   styleUrl: './child.css',
 })
 export class Child {
-    @Input() showData: {id: number; name: string } [] = [];
+    @Output() myEvent = new EventEmitter();
+
+    emitEvent(){
+      this.myEvent.emit 
+      ('Event emitted from child component');
+    }
 }

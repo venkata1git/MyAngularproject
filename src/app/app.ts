@@ -12,10 +12,9 @@ import { Child } from './child/child';
   styleUrl: './app.css'
 })
 export class  App  {  
-     courses: {id: number; name: string }[]= [
-      {id: 1, name : 'Mastering JavaScript'},
-      {id: 2, name : 'Mastering React'},
-      {id: 3, name : 'Mastering TypeScript'},
-      {id: 4, name : 'Mastering HTML,CSS'},
-     ];
+     message: string ='';
+
+     receiveChildEvent(eventData: string){
+      this.message = eventData;
+     }
  } 
