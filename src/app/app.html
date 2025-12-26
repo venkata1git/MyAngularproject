@@ -1,5 +1,5 @@
-<h1>Component Updation hook</h1>
 <div>
-  <app-test [user] ="user"></app-test>
-  <button (click)="changeUserName()">Change User Name</button>
+  <h1>Parent Component</h1>
+  <button (click)="showMsg()">Update Me</button>
+  <app-child [receiveMessage] = "displayMessage" ></app-child>
 </div>
