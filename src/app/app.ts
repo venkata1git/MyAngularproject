@@ -13,9 +13,7 @@ import { Test } from './test/test';
 })
 export class  App {  
      inputValue: string = 'new value';
-     
-    //  constructor(){
-    //     console.log('Calling from constructor - ', this.inputValue);
-        
-    //  }
+     updateValue(){
+        this.inputValue='App';
+     }
  } 
