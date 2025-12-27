@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgForOf } from '@angular/common';
 
@@ -8,11 +8,18 @@ import { NgForOf } from '@angular/common';
   templateUrl: './child.html',
   styleUrl: './child.css',
 })
-export class Child {
-    @Output() myEvent = new EventEmitter();
+export class Child implements OnInit, OnDestroy{
+    @Input() items : string [] = [];
+    @Output() itemDeleted = new EventEmitter<number>();
+  
+    deleteIndex(index: number){
+      this.itemDeleted.emit(index);
+    }
 
-    emitEvent(){
-      this.myEvent.emit 
-      ('Event emitted from child component');
+    ngOnInit(): void {
+      console.log('Child component is initialized');
+    }
+    ngOnDestroy(): void {
+      console.log('Child component is destroyed');
     }
 }

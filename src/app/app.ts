@@ -11,10 +11,19 @@ import { Child } from './child/child';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class  App  {  
-     message: string ='';
+export class  App implements OnInit {  
+     itemsArr: string[] = ['Item 1','Item 2','Item 3'];
 
-     receiveChildEvent(eventData: string){
-      this.message = eventData;
+     addItem() {
+      const newItem = `Item ${this.itemsArr.length + 1}`;
+      this.itemsArr.push(newItem);
+     }
+     deleteItem(index: number){
+        if(index >=0 && index < this.itemsArr.length){
+          this.itemsArr.splice(index, 1);
+        }
+     }
+     ngOnInit(): void {
+       console.log('App Component is initialized');
      }
  } 
