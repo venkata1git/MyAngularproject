@@ -8,18 +8,10 @@ import { NgForOf } from '@angular/common';
   templateUrl: './child.html',
   styleUrl: './child.css',
 })
-export class Child implements OnInit, OnDestroy{
-    @Input() items : string [] = [];
-    @Output() itemDeleted = new EventEmitter<number>();
-  
-    deleteIndex(index: number){
-      this.itemDeleted.emit(index);
-    }
+export class Child {
+    count: number =0;
 
-    ngOnInit(): void {
-      console.log('Child component is initialized');
-    }
-    ngOnDestroy(): void {
-      console.log('Child component is destroyed');
+    incrCounter(){
+      this.count++;
     }
 }
