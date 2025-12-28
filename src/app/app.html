@@ -1,5 +1,12 @@
 <div>
-  <h2>App Component</h2>
-  <button  #btnIncr (click) ="incrChildCounter() ">Increment Counter</button>
-  <app-child></app-child>
+  <label for="colorPicker">Select Color</label>
+  <input type="color" id="colorPicker" #colorInput/>
+</div>
+<div class="color-box" [style.backgroundColor]="selectedColor">
+  <h1>App Component</h1>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt impedit 
+    in temporibus eaque dolorem. Ea blanditiis dolorum et asperiores alias quasi 
+    inventore, quibusdam dolorem reiciendis consequuntur omnis at ab nostrum.
+  </p>
 </div>
