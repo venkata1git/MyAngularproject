@@ -10,14 +10,30 @@ import { Child } from './child/child';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, FormsModule, CommonModule, Child, ] , // 2. Add CommonModule here
-  templateUrl: './app.html',
+  template: `
+  <h1>User Information</h1>
+  <div class="user-info">
+    <div class="info-block">
+      <h4>Without JSON</h4>
+      <p>{{ userDetails }}</p>
+    </div>
+    <div class="info-block">
+      <h4>With JSON</h4>
+      <pre>{{ userDetails | json | uppercase }}</pre>
+    </div>
+  </div>
+  `,
   styleUrl: './app.css'
 })
 export class App {
-  weightInPounds: number = 0;
-  weightInKilograms: number = 0;
-
-  convertWeight(){
-    this.weightInKilograms = this.weightInPounds * 0.453592;
-  }
+  userDetails = {
+    name: 'User',
+    email:'user@example.com',
+    address: {
+      street: '23 Main st',
+      city: 'las vegas',
+      state:'nevada',
+      zip: 'N3J7K9',
+    },
+  };
 }
