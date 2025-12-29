@@ -1,7 +1,12 @@
-<p>{{ "Angular Slice pipe" | slice : 0 :7 }}</p>
-<!-- <p>{{ "Angular Slice pipe" | slice : 0 :-7 }}</p>
-<p>{{ "Angular Slice pipe" | slice : -7 }}</p> -->
-<p>{{ sliceArr | slice: 0 : 3 }}</p>
-<p>{{ sliceArr | slice: 3 }}</p>
-<p>{{ sliceArr | slice: -3 }}</p>
-<p>{{ sliceArr | slice: 0 : -3 }}</p>
+<div>
+  <div *ngFor="let product of products |
+   slice: startIndex : endIndex">
+    <h2>{{ product.name }}</h2>
+    <img src="prduct.imageUrl" alt="Course Image" 
+    width="400px"/>
+  </div>
+  <div>
+    <button type="button" (click)="previousPage()" >Previous</button>
+    <button type="button" (click)="nextPage()">Next</button>
+  </div>
+</div>

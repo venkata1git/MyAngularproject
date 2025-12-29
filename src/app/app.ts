@@ -14,5 +14,51 @@ import { Child } from './child/child';
   styleUrl: './app.css'
 })
 export class App {
-  sliceArr = ['ItemA ' , 'ItemB ' , 'ItemC ' ,'ItemD '];
+  products: { name: string; imageUrl: string } [] =[
+    {
+      name:'css',
+      imageUrl:'css.osed',
+    },
+    {
+      name:'html',
+      imageUrl:'html.sdfsf',
+    },
+    {
+      name:'javascript',
+      imageUrl:'js.script',
+    },
+    {
+      name:'angular',
+      imageUrl:'angular.forum',
+    },
+    {
+      name:'nestjs',
+      imageUrl:'assets.ns',
+    },
+    {
+      name:'bun',
+      imageUrl:'bunjpg',
+    },
+    {
+      name:'vue',
+      imageUrl:'vue.qwerty',
+    },
+    {
+      name:'react',
+      imageUrl:'react.oku',
+    },
+  ];
+  pgSize: number =4;
+  startIndex: number =0;
+  endIndex: number= this.pgSize;
+
+  previousPage(){
+    this.startIndex -= this.pgSize;
+    this.endIndex -= this.pgSize;
+  }
+  nextPage(){
+    this.startIndex += this.pgSize;
+    this.endIndex += this.pgSize;
+
+  }
 }
