@@ -14,5 +14,10 @@ import { Child } from './child/child';
   styleUrl: './app.css'
 })
 export class App {
-  pi=3.14
+  weightInPounds: number = 0;
+  weightInKilograms: number = 0;
+
+  convertWeight(){
+    this.weightInKilograms = this.weightInPounds * 0.453592;
+  }
 }
