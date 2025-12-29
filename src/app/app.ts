@@ -14,6 +14,11 @@ import { Child } from './child/child';
   styleUrl: './app.css'
 })
 export class App {
-  title: string ='Example of pipe expression';
-  showDt: Date = new Date();
+  employees = [
+  
+  { name: 'userA', state: 'california', salary: 50000},
+  { name: 'userB', state: 'New York', salary: 70000},
+  { name: 'userC', state: 'texas', salary: 55000},
+  { name: 'userD', state: 'Ontario', salary: 60000},
+    ];
 }
