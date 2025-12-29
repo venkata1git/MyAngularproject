@@ -1,14 +1,7 @@
-<div class="table-container">
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>State</th>
-      <th>Salary</th>
-    </tr>
-    <tr *ngFor="let emp of employees">
-      <td>{{ emp.name | titlecase }}</td>
-      <td>{{ emp.state | slice: 0 : 3 | uppercase }}</td>
-      <td>{{ emp.salary | currency : "CAD" }}</td>
-    </tr>
-  </table>
-</div>
+<p>{{ "Angular Slice pipe" | slice : 0 :7 }}</p>
+<!-- <p>{{ "Angular Slice pipe" | slice : 0 :-7 }}</p>
+<p>{{ "Angular Slice pipe" | slice : -7 }}</p> -->
+<p>{{ sliceArr | slice: 0 : 3 }}</p>
+<p>{{ sliceArr | slice: 3 }}</p>
+<p>{{ sliceArr | slice: -3 }}</p>
+<p>{{ sliceArr | slice: 0 : -3 }}</p>
